@@ -1,132 +1,4 @@
-/* http://meyerweb.com/eric/tools/css/reset/
-   v2.0 | 20110126
-   License: none (public domain)
-*/
-
-html,
-body,
-div,
-span,
-applet,
-object,
-iframe,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-blockquote,
-pre,
-a,
-abbr,
-acronym,
-address,
-big,
-cite,
-code,
-del,
-dfn,
-em,
-img,
-ins,
-kbd,
-q,
-s,
-samp,
-small,
-strike,
-strong,
-sub,
-sup,
-tt,
-var,
-b,
-u,
-i,
-center,
-dl,
-dt,
-dd,
-ol,
-ul,
-li,
-fieldset,
-form,
-label,
-legend,
-table,
-caption,
-tbody,
-tfoot,
-thead,
-tr,
-th,
-td,
-article,
-aside,
-canvas,
-details,
-embed,
-figure,
-figcaption,
-footer,
-header,
-hgroup,
-menu,
-nav,
-output,
-ruby,
-section,
-summary,
-time,
-mark,
-audio,
-video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-size: 100%;
-  font: inherit;
-  vertical-align: baseline;
-}
-/* HTML5 display-role reset for older browsers */
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-menu,
-nav,
-section {
-  display: block;
-}
-body {
-  line-height: 1;
-}
-ol,
-ul {
-  list-style: none;
-}
-blockquote,
-q {
-  quotes: none;
-}
-blockquote:before,
-blockquote:after,
-q:before,
-q:after {
-  content: "";
-  content: none;
-}
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-}
+@import "reset.css";
 
 /* Custom Styles */
 body,
@@ -167,16 +39,28 @@ nav ul {
   color: #bbb;
   height: 50px;
   align-items: center;
-  padding: 0 10px;
+}
+
+.yellow-banner {
+  background-color: yellow;
+  padding: 12px;
+}
+
+.yellow-banner p {
+  font-size: 13px;
 }
 
 .logo {
-  width: 60px;
+  height: 50px;
 }
 
 .navbar-links {
   text-transform: uppercase;
   font-weight: 700;
+}
+
+.search, .burger {
+  margin-right: 10px;
 }
 
 header {
@@ -189,6 +73,7 @@ header {
 header h2 {
   font-size: 26px;
   color: #eee;
+  padding: 10px 0;
 }
 
 header .featured-articles {
@@ -202,7 +87,19 @@ header .featured-articles:first-child {
   grid-column-start: span 2;
   grid-row-start: span 2;
   display: flex;
-  align-items: flex-end;
+  justify-content: flex-end;
+  flex-direction: column;
+}
+
+.article-tag {
+  text-transform: uppercase;
+  font-size: 14px;
+  color:#fff;
+}
+
+.author {
+  font-size: 12px;
+  color:rgba(255, 255, 255, 0.6);
 }
 
 .main-container {
@@ -246,7 +143,11 @@ header .featured-articles:first-child {
 }
 
 .latest-news h2 {
-  padding: 5px;
+  padding: 5px 0;
+}
+
+.latest-news .author {
+  color:#C7C7C7;
 }
 
 .details {
@@ -296,7 +197,11 @@ footer {
 
 @media screen and (max-width: 768px) {
   .navbar-links {
-    visibility: hidden;
+    display: none;
+  }
+
+  .logo-container {
+    flex-basis: 100%;
   }
 
   header {
