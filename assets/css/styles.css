@@ -194,7 +194,7 @@ header h2 {
 header .featured-articles {
   padding: 100px 10px 10px;
   background: radial-gradient(rgba(255, 255, 255, 0.1), rgba(0, 0, 0, 0.8)),
-    url(./assets/header.jpg) no-repeat;
+    url(../img/header.jpg) no-repeat;
   background-size: cover;
 }
 
@@ -210,8 +210,12 @@ header .featured-articles:first-child {
   margin: auto;
 }
 
-section {
+.latest-news, .latest-funding, .section-cards {
   padding: 40px 0;
+}
+
+.section-cards section {
+  padding: 0 0 30px;
 }
 
 .latest-news h1,
@@ -268,7 +272,7 @@ section {
 .section-cards article {
   height: 250px;
   background: radial-gradient(rgba(255, 255, 255, 0.1), rgba(0, 0, 0, 0.8)),
-    url(./assets/sections1.jpeg);
+    url(../img/sections1.jpeg);
   color: #fff;
   padding: 10px;
   display: flex;
@@ -287,6 +291,7 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
+  text-align: center;
 }
 
 @media screen and (max-width: 768px) {
@@ -307,15 +312,16 @@ footer {
   .latest-funding div {
     flex-direction: column;
   }
+
   .latest-news article {
     display: flex;
   }
+  
   .latest-news img {
     width: 80px;
     height: 80px;
   }
-  .latest-news {
-  }
+
   .section-cards {
     grid-template-columns: 1fr;
   }
