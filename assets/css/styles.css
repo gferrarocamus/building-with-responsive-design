@@ -201,6 +201,23 @@ header .featured-articles:first-child {
   padding: 15px 10px;
 }
 
+.funding-tags {
+  border-bottom: 1px solid #ddd;
+}
+
+.funding-tags p {
+  padding: 4px 0;
+  font-size: 14px;
+}
+
+.funding-headline {
+  font-size: 12px;
+}
+
+.gray {
+  color: #bbb;
+}
+
 .section-cards {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -213,7 +230,7 @@ header .featured-articles:first-child {
 }
 
 .section-cards h2 {
-  padding-top: 100px;
+  padding: 10px 0;
 }
 
 .section-cards article {
@@ -223,12 +240,19 @@ header .featured-articles:first-child {
   color: #fff;
   padding: 10px;
   display: flex;
-  align-items: flex-end;
+  justify-content: flex-end;
+  flex-direction: column;
 }
 
 .section-cards ul {
   padding-left: 20px;
   list-style: inherit;
+}
+
+.section-latest img {
+  height: 70px;
+  width: 100px;
+  float: right;
 }
 
 footer {
@@ -239,6 +263,10 @@ footer {
   justify-content: center;
   align-items: center;
   text-align: center;
+}
+
+.uppercase {
+  text-transform: uppercase;
 }
 
 /* LARGE DEVICES */
@@ -351,7 +379,7 @@ footer {
 
   .latest-funding-links a:last-child {
     padding-bottom: 16px;
-  } 
+  }
 
   .latest-news div,
   .latest-funding div {
