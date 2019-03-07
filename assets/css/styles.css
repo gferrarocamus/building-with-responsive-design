@@ -244,15 +244,45 @@ header .featured-articles:first-child {
   flex-direction: column;
 }
 
-.section-cards ul {
-  padding-left: 20px;
-  list-style: inherit;
+.section-latest{
+  color: #f42;
+  height: 70px;
+  background-color: #FFE8E4;
 }
 
 .section-latest img {
   height: 70px;
   width: 100px;
   float: right;
+}
+
+.section-latest h6 {
+  font-size: 14px;
+  padding: 5px;
+}
+
+.section-latest p {
+  font-weight: 700;
+  font-size: 14px;
+  padding: 5px;
+}
+
+.related-articles {
+  padding-left: 20px;
+  list-style: none;
+}
+
+.related-articles li {
+  font-size: 14px;
+}
+
+.related-articles li::before {
+  content: "\2022";
+  color: #f42;
+  font-weight: bold;
+  display: inline-block;
+  width: 1em;
+  margin-left: -1em;
 }
 
 footer {
@@ -263,6 +293,10 @@ footer {
   justify-content: center;
   align-items: center;
   text-align: center;
+}
+
+footer img {
+  width: 50px;
 }
 
 .uppercase {
@@ -310,6 +344,10 @@ footer {
 
 /* MEDIUM DEVICES */
 @media screen and (min-width: 769px) and (max-width: 1023.98px) {
+  .main-container {
+    width: 90%;
+  }
+
   .latest-news div article,
   .latest-funding div article {
     flex-basis: 33.33%;
@@ -347,6 +385,10 @@ footer {
 
 /* SMALL DEVICES */
 @media screen and (max-width: 768.98px) {
+  .main-container {
+    width: 95%;
+  }
+
   .navbar-links {
     display: none;
   }
