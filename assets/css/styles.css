@@ -16,7 +16,8 @@ h4 {
   font-weight: 700;
 }
 
-h1 {
+h1,
+.latest-funding-links {
   color: #f42;
 }
 
@@ -30,6 +31,15 @@ h3 {
 
 h4 {
   font-size: 18px;
+}
+
+a {
+  text-decoration: none;
+  color: #f42;
+}
+
+a:hover {
+  text-decoration: underline;
 }
 
 nav ul {
@@ -229,7 +239,7 @@ footer {
   .latest-news article {
     display: flex;
   }
-  
+
   .latest-news img {
     width: 80px;
     height: 80px;
@@ -254,7 +264,37 @@ footer {
   .burger {
     display: none;
   }
+
   header .featured-articles:first-child h2 {
     font-size: 36px;
+  }
+
+  .latest-funding-links {
+    height: 48px;
+  }
+
+  .latest-funding-links h2 {
+    float: left;
+  }
+
+  .latest-funding-links a {
+    position: relative;
+    margin-right: 25px;
+    line-height: 48px;
+    float: right;
+  }
+
+  .latest-funding-links a:last-child {
+    margin-right: 0;
+  }
+
+  .latest-funding-links a::after {
+    content: "|";
+    position: absolute;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  .latest-funding-links a:last-child::after {
+    content: "";
   }
 }
