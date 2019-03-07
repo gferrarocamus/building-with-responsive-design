@@ -502,4 +502,9 @@ footer img {
   .section-cards {
     grid-template-columns: 1fr;
   }
+
+  .footer-social,
+  footer ul {
+    flex-wrap: wrap;
+  }
 }
