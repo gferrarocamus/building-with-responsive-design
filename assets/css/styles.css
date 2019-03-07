@@ -1,6 +1,11 @@
 @import "reset.css";
 
 /* Custom Styles */
+
+*, :after, :before {
+  box-sizing: border-box;
+}
+
 body,
 p,
 a,
@@ -16,8 +21,7 @@ h4 {
   font-weight: 700;
 }
 
-h1,
-.latest-funding-links {
+h1 {
   color: #f42;
 }
 
@@ -132,11 +136,11 @@ header .featured-articles:first-child {
   font-size: 28px;
 }
 
-.latest-news > div,
-.latest-funding > div {
+.flex-container {
   display: flex;
   flex-wrap: wrap;
   margin-right: -10px;
+  clear: both;
 }
 
 .latest-news div article,
@@ -161,8 +165,40 @@ header .featured-articles:first-child {
 }
 
 .details {
-  height: 100px;
-  background: linear-gradient(#f42 30%, pink 30%);
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 70px 1fr;
+  height: 90px;
+  background: linear-gradient(#f42 40%, #FFE8E4 40%);
+}
+
+.startup-logo {
+  width: 70px;
+  grid-row-end: span 2;
+  align-self: center;
+  padding:0 10px;
+}
+
+.details h3 {
+  color:#fff;
+  font-weight: 700;
+  font-size: 16px;
+  padding: 8px 0;
+}
+
+.funding-received {
+  font-weight: 700;
+  font-size: 16px;
+}
+
+.funding-details {
+  font-size: 14px;
+  color:rgba(0, 0, 0, 0.5);
+}
+
+.funding-tags, .funding-headline {
+  background-color: #fffaf8;
+  padding: 15px 10px;
 }
 
 .section-cards {
@@ -205,7 +241,84 @@ footer {
   text-align: center;
 }
 
-@media screen and (max-width: 768px) {
+/* LARGE DEVICES */
+@media screen and (min-width: 1024px) {
+  .burger {
+    display: none;
+  }
+
+  header .featured-articles:first-child h2 {
+    font-size: 36px;
+  }
+
+  .latest-funding-links {
+    height: 48px;
+  }
+
+  .latest-funding-links h1 {
+    float: left;
+  }
+
+  .latest-funding-links a {
+    margin-right: 25px;
+    line-height: 48px;
+    float: right;
+  }
+
+  .latest-funding-links a:nth-of-type(1) {
+    margin-right: 0;
+  }
+
+  .latest-funding-links a::after {
+    content: "|";
+    position: absolute;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  .latest-funding-links a:nth-of-type(1)::after{
+    content: "";
+  }
+}
+
+/* MEDIUM DEVICES */
+@media screen and (min-width: 769px) and (max-width: 1023.98px) {
+  .latest-news div article,
+  .latest-funding div article {
+    flex-basis: 33.33%;
+  }
+
+  .latest-funding-links a {
+    margin-right: 25px;
+    line-height: 48px;
+    float: left;
+  }
+
+  .latest-funding-links a:first-child {
+    margin-right: 0;
+    clear:both;
+  }
+
+  .latest-funding-links a::after {
+    content: "|";
+    position: absolute;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  .latest-funding-links a:last-child::after{
+    content: "";
+  }
+
+  .latest-funding .flex-container article:last-child {
+    display: none;
+  }
+
+  .section-cards {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* SMALL DEVICES */
+@media screen and (max-width: 768.98px) {
   .navbar-links {
     display: none;
   }
@@ -231,6 +344,15 @@ footer {
     grid-column-start: span 1;
   }
 
+  .latest-funding-links a {
+    display:block;
+    padding: 6px 0;
+  }
+
+  .latest-funding-links a:last-child {
+    padding-bottom: 16px;
+  } 
+
   .latest-news div,
   .latest-funding div {
     flex-direction: column;
@@ -247,54 +369,5 @@ footer {
 
   .section-cards {
     grid-template-columns: 1fr;
-  }
-}
-
-@media screen and (min-width: 769px) and (max-width: 1024px) {
-  .latest-news div article,
-  .latest-funding div article {
-    flex-basis: 33.33%;
-  }
-  .section-cards {
-    grid-template-columns: 1fr 1fr;
-  }
-}
-
-@media screen and (min-width: 769px) {
-  .burger {
-    display: none;
-  }
-
-  header .featured-articles:first-child h2 {
-    font-size: 36px;
-  }
-
-  .latest-funding-links {
-    height: 48px;
-  }
-
-  .latest-funding-links h2 {
-    float: left;
-  }
-
-  .latest-funding-links a {
-    position: relative;
-    margin-right: 25px;
-    line-height: 48px;
-    float: right;
-  }
-
-  .latest-funding-links a:last-child {
-    margin-right: 0;
-  }
-
-  .latest-funding-links a::after {
-    content: "|";
-    position: absolute;
-    margin-left: 10px;
-    margin-right: 10px;
-  }
-  .latest-funding-links a:last-child::after {
-    content: "";
   }
 }
