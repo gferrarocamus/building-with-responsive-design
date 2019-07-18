@@ -464,7 +464,7 @@ footer img {
   }
 
   .latest-news img {
-    padding-right: 15px;
+    margin-right: 15px;
   }
 
   header {
@@ -503,8 +503,17 @@ footer img {
     grid-template-columns: 1fr;
   }
 
-  .footer-social,
+  .icon-container {
+    width: 30px;
+    height: 30px;
+  }
+
   footer ul {
     flex-wrap: wrap;
+    margin-right: -20px;
+  }
+
+  footer ul li {
+    padding-top: 10px;
   }
 }
